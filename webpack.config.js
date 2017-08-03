@@ -1,4 +1,5 @@
 var path = require('path')
+var webpack = require('webpack')
 
 module.exports = {
     context: path.join(__dirname, 'src'),
@@ -18,4 +19,13 @@ module.exports = {
 	    },
 	],
     },
+    cache: true,
+    plugins: [
+	new webpack.HotModuleReplacementPlugin(),
+    ],
+    devServer: {
+	contentBase: 'www',
+	port: 8080,
+	hot: true,
+    }
 }
