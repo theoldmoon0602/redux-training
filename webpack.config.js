@@ -24,7 +24,7 @@ module.exports = {
 	new webpack.HotModuleReplacementPlugin(),
     ],
     devServer: {
-	contentBase: 'www',
+	contentBase: 'dist',
 	port: 8080,
 	hot: true,
     }
